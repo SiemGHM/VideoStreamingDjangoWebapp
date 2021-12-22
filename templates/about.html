@@ -1,0 +1,20 @@
+
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> Welcome to About Us page</h1>
+<p> {{ my_name }} </P>
+<p> {{ my_email }} </P>
+<p> {{ my_number }} </P>
+<ul>
+{% for an_item in counts %}
+    {% if an_item==3287%}
+        <h4> my fav </h4>
+    <li>{{forloop.counter}} - {{ an_item }} </li>
+
+{% endfor %}
+</ul>
+
+{% endblock%}
