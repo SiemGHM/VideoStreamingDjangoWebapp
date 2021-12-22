@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> Welcome to the Recharge Page</h1>
+
+<h4> Please insert your card number</p>
+
+<form class='inputform', id='usersignupform' method="POST" action="?"> {% csrf_token %}
+<label for="code">Ticket Code:</label><br>
+<input  type="text" id="code" name="code" >
+
+
+<input type="submit" value='Recharge' />
+</form>
+
+{% endblock%}

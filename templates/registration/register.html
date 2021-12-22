@@ -1,0 +1,16 @@
+
+
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+<form class='inputform', id='usersignupform' method="POST" action="?"> {% csrf_token %}
+{{ form| crispy  }}
+{{ formp | crispy  }}
+
+<input type="submit" value='Save' />
+
+</form>
+
+
+{% endblock%}

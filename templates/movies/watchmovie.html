@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> Welcome to {{obj.title}}</h1>
+<p> {{ obj.price }} </P>
+
+
+
+<video class="embed-responsive embed-responsive-16by9"  name='demo'  autoplay width="720" height="400" controls >
+<source src="{{STATIC_URL}}{{ obj.video.url }}" type="video/mp4"></source>
+</video>
+
+
+
+{% endblock%}

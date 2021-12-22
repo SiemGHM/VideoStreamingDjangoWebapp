@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> Welcome to {{obj.title}}</h1>
+<p> {{ obj.price }} </P>
+
+
+
+<video class="embed-responsive embed-responsive-16by9"  name='demo' poster="{{STATIC_URL}}{{ obj.thumbnail.url }}"  autoplay width="720" height="400" controls >
+<source src="{{STATIC_URL}}{{ obj.trailer.url }}" type="video/mp4"></source>
+</video>
+
+<form class='inputform', id='usersignupform' method="POST" action="?"> {% csrf_token %}
+<input style="display:none;" type="text" id="user" name="user" value="{{user.username}}">
+<input style="display:none;" type="text" id="movie" name="movie" value="{{obj.movieID}}">
+
+<input type="submit" value='Buy' />
+</form>
+
+{% endblock%}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% comment %} {% load crispy_forms_tags %} {% endcomment %}
+
+<h1> this is login in bruh</h1>
+
+<form method="POST" class="form-group"> {% csrf_token %}
+
+{{form}}
+<button type="submit" class="btn btn-success">Login</button>  
+</form>
+<p>Or you can sign up here <a href="/register"> Here </a></p>
+
+
+{% endblock %}
